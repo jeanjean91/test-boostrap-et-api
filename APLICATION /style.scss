@@ -1,0 +1,28 @@
+$couleur : #aaa;
+@mixin montest($arrondi,$fond){
+	border-radius:$arrondi;
+	background-color:$fond;
+	font-weigh:bold;
+}
+body{
+	background:$couleur;
+	ul{
+	 	list-style-type:none;
+	 	padding:0;
+	 	margin:0;
+
+	 	li{
+	 		@include montest(20px,#fac);
+	 		
+	 		&.item{
+	 			border:1px solid black;
+	 		}
+	 		&:hover {
+	 			background:blue;
+	 		}
+	 	}
+		&:hover{
+			background:red;
+		}
+	}
+}
